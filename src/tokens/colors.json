@@ -1,0 +1,23 @@
+{
+  "card": "#FFFFFF",
+  "error": "#FF3B30",
+  "muted": "#E0E0E0",
+  "border": "#CCCCCC",
+  "primary": "#FFE600",
+  "sidebar": "#EEEEEE",
+  "success": "#34C759",
+  "warning": "#FF9500",
+  "secondary": "#FF07AF",
+  "background": "#F8F8F8",
+  "foreground": "#1A1A1A",
+  "sidebarActive": "#FFE600",
+  "cardForeground": "#1A1A1A",
+  "errorForeground": "#000000",
+  "mutedForeground": "#555555",
+  "primaryForeground": "#000000",
+  "sidebarForeground": "#1A1A1A",
+  "successForeground": "#000000",
+  "warningForeground": "#000000",
+  "secondaryForeground": "#000000",
+  "sidebarActiveForeground": "#000000"
+}
