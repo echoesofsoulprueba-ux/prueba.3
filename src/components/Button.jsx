@@ -1,54 +1,62 @@
-import React from 'react';
+import * as React from 'react';
+import { cva } from 'class-variance-authority';
+import { twMerge } from 'tailwind-merge';
+import PropTypes from 'prop-types'; // Import PropTypes
 
-/**
- * A simple utility for conditionally joining class names.
- * @param {...(string | boolean | null | undefined)} classes
- * @returns {string}
- */
-function cn(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
-
-const buttonVariants = {
-  base: 'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
-  variant: {
-    primary: 'bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-primary-foreground',
-    secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/90 focus-visible:ring-secondary-foreground',
-    ghost: 'hover:bg-muted hover:text-muted-foreground focus-visible:ring-muted-foreground'
-  },
-  size: {
-    sm: 'h-9 px-3 rounded-md',
-    md: 'h-10 px-4 py-2',
-    lg: 'h-11 px-8 rounded-md'
+const buttonVariants = cva(
+  'inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  {
+    variants: {
+      variant: {
+        primary: 'bg-primary text-primaryForeground hover:bg-primary/90 active:bg-primary/80',
+        secondary: 'bg-secondary text-secondaryForeground hover:bg-secondary/90 active:bg-secondary/80',
+        ghost: 'hover:bg-muted hover:text-mutedForeground',
+      },
+      size: {
+        sm: 'h-9 px-3 text-sm',
+        md: 'h-10 px-4 py-2 text-base',
+        lg: 'h-11 px-8 text-lg',
+      },
+    },
+    defaultVariants: {
+      variant: 'primary',
+      size: 'md',
+    },
   }
-};
+);
 
-/**
- * Renders a customizable Button component.
- * @param {object} props
- * @param {'primary' | 'secondary' | 'ghost'} [props.variant='primary'] - The visual style of the button.
- * @param {'sm' | 'md' | 'lg'} [props.size='md'] - The size of the button.
- * @param {boolean} [props.disabled=false] - Whether the button is disabled.
- * @param {string} [props.className] - Additional CSS classes to apply.
- * @param {React.ReactNode} props.children - The content to display inside the button.
- * @param {React.Ref<HTMLButtonElement>} ref - Ref to the underlying button element.
- */
-const Button = React.forwardRef(function Button({ className, variant = 'primary', size = 'md', disabled = false, ...props }, ref) {
-  return (
-    <button
-      className={cn(
-        buttonVariants.base,
-        buttonVariants.variant[variant],
-        buttonVariants.size[size],
-        className
-      )}
-      ref={ref}
-      disabled={disabled}
-      {...props}
-    />
+const Button = React.forwardRef(function ButtonComponent(props, ref) {
+  const { className, variant = 'primary', size = 'md', asChild = false, ...restProps } = props;
+
+  // If asChild is true, render a different component (e.g., a div or a custom component passed as a child)
+  // and pass all props to it. This simple implementation passes them to a <span>.
+  // For a more robust \`asChild\` functionality that properly merges refs and handles complex children,
+  // a utility like Radix UI's Slot would typically be used, but that's outside the scope
+  // of a plain React + Tailwind component without additional dependencies (beyond CVA and twMerge).
+  const Component = asChild ? 'span' : 'button';
+
+  return React.createElement(
+    Component,
+    {
+      className: twMerge(buttonVariants({ variant, size, className })),
+      ref: ref,
+      ...restProps,
+    },
+    restProps.children
   );
 });
 
 Button.displayName = 'Button';
 
-export { Button };
+// PropTypes for validation (runtime, not compile-time)
+Button.propTypes = {
+  variant: PropTypes.oneOf(['primary', 'secondary', 'ghost']),
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
+  asChild: PropTypes.bool,
+  className: PropTypes.string,
+  children: PropTypes.node,
+  disabled: PropTypes.bool,
+  type: PropTypes.oneOf(['submit', 'reset', 'button']),
+};
+
+export { Button, buttonVariants };
