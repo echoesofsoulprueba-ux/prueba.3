@@ -1,0 +1,72 @@
+const colors = require('./src/tokens/colors.json')
+const colorScales = require('./src/tokens/colorScales.json')
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'card': colors['card'],
+        'error': colors['error'],
+        'muted': colors['muted'],
+        'border': colors['border'],
+        'sidebar': colors['sidebar'],
+        'success': colors['success'],
+        'warning': colors['warning'],
+        'secondary': colors['secondary'],
+        'background': colors['background'],
+        'foreground': colors['foreground'],
+        'sidebar-active': colors['sidebarActive'],
+        'card-foreground': colors['cardForeground'],
+        'error-foreground': colors['errorForeground'],
+        'muted-foreground': colors['mutedForeground'],
+        'primary-foreground': colors['primaryForeground'],
+        'sidebar-foreground': colors['sidebarForeground'],
+        'success-foreground': colors['successForeground'],
+        'warning-foreground': colors['warningForeground'],
+        'secondary-foreground': colors['secondaryForeground'],
+        'sidebar-active-foreground': colors['sidebarActiveForeground'],
+        'accent': {
+          '50': colorScales['accent'].shades['50'],
+          '100': colorScales['accent'].shades['100'],
+          '200': colorScales['accent'].shades['200'],
+          '300': colorScales['accent'].shades['300'],
+          '400': colorScales['accent'].shades['400'],
+          '500': colorScales['accent'].shades['500'],
+          '600': colorScales['accent'].shades['600'],
+          '700': colorScales['accent'].shades['700'],
+          '800': colorScales['accent'].shades['800'],
+          '900': colorScales['accent'].shades['900'],
+        },
+        'neutral': {
+          '50': colorScales['neutral'].shades['50'],
+          '100': colorScales['neutral'].shades['100'],
+          '200': colorScales['neutral'].shades['200'],
+          '300': colorScales['neutral'].shades['300'],
+          '400': colorScales['neutral'].shades['400'],
+          '500': colorScales['neutral'].shades['500'],
+          '600': colorScales['neutral'].shades['600'],
+          '700': colorScales['neutral'].shades['700'],
+          '800': colorScales['neutral'].shades['800'],
+          '900': colorScales['neutral'].shades['900'],
+        },
+        'primary': {
+          DEFAULT: colors['primary'],
+          '50': colorScales['primary'].shades['50'],
+          '100': colorScales['primary'].shades['100'],
+          '200': colorScales['primary'].shades['200'],
+          '300': colorScales['primary'].shades['300'],
+          '400': colorScales['primary'].shades['400'],
+          '500': colorScales['primary'].shades['500'],
+          '600': colorScales['primary'].shades['600'],
+          '700': colorScales['primary'].shades['700'],
+          '800': colorScales['primary'].shades['800'],
+          '900': colorScales['primary'].shades['900'],
+        },
+      },
+      fontFamily: {
+        sans: ['Lato', 'sans-serif'],
+      },
+    },
+  },
+}
