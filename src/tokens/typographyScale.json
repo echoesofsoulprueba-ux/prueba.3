@@ -2,37 +2,37 @@
   {
     "name": "Display",
     "role": "display",
-    "sizePx": 60,
-    "sizeRem": 3.75,
-    "weightName": "Black",
-    "description": "Titular principal para secciones clave o llamadas a la acción impactantes.",
-    "weightValue": 900
+    "sizePx": 48,
+    "sizeRem": 3,
+    "weightName": "ExtraBold",
+    "description": "Texto grande para titulares de impacto",
+    "weightValue": 800
   },
   {
     "name": "Heading 1",
     "role": "heading",
-    "sizePx": 48,
-    "sizeRem": 3,
+    "sizePx": 36,
+    "sizeRem": 2.25,
     "weightName": "Bold",
-    "description": "Encabezados de página o secciones mayores, introduciendo contenido principal.",
+    "description": "Título principal de una sección o página",
     "weightValue": 700
   },
   {
     "name": "Heading 2",
     "role": "heading",
-    "sizePx": 36,
-    "sizeRem": 2.25,
+    "sizePx": 30,
+    "sizeRem": 1.875,
     "weightName": "Bold",
-    "description": "Subencabezados para organizar el contenido dentro de una sección mayor.",
+    "description": "Subtítulo de segundo nivel para secciones",
     "weightValue": 700
   },
   {
     "name": "Heading 3",
     "role": "heading",
-    "sizePx": 28,
-    "sizeRem": 1.75,
+    "sizePx": 24,
+    "sizeRem": 1.5,
     "weightName": "Semibold",
-    "description": "Títulos para subsecciones o elementos destacados, manteniendo la jerarquía.",
+    "description": "Subtítulo de tercer nivel para contenido específico",
     "weightValue": 600
   },
   {
@@ -41,7 +41,7 @@
     "sizePx": 20,
     "sizeRem": 1.25,
     "weightName": "Semibold",
-    "description": "Encabezados de tarjetas, listas o componentes menores, para guiar la lectura.",
+    "description": "Subtítulo de cuarto nivel para detalles o listas",
     "weightValue": 600
   },
   {
@@ -50,7 +50,7 @@
     "sizePx": 16,
     "sizeRem": 1,
     "weightName": "Regular",
-    "description": "Texto principal para párrafos, descripciones y la mayor parte del contenido.",
+    "description": "Texto principal para párrafos y lectura general",
     "weightValue": 400
   }
 ]
