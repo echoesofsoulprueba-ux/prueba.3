@@ -4,10 +4,10 @@
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "module": "./dist/index.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/index.esm.js",
       "require": "./dist/index.js"
     },
     "./dist/index.css": "./dist/index.css"
