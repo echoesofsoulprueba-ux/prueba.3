@@ -5,7 +5,7 @@
     "sizePx": 48,
     "sizeRem": 3,
     "weightName": "ExtraBold",
-    "description": "Texto grande para titulares de impacto",
+    "description": "Used for large, prominent headlines or short impactful text.",
     "weightValue": 800
   },
   {
@@ -14,7 +14,7 @@
     "sizePx": 36,
     "sizeRem": 2.25,
     "weightName": "Bold",
-    "description": "Título principal de una sección o página",
+    "description": "Primary page titles and main section headings.",
     "weightValue": 700
   },
   {
@@ -23,7 +23,7 @@
     "sizePx": 30,
     "sizeRem": 1.875,
     "weightName": "Bold",
-    "description": "Subtítulo de segundo nivel para secciones",
+    "description": "Secondary section headings and prominent sub-titles.",
     "weightValue": 700
   },
   {
@@ -32,7 +32,7 @@
     "sizePx": 24,
     "sizeRem": 1.5,
     "weightName": "Semibold",
-    "description": "Subtítulo de tercer nivel para contenido específico",
+    "description": "Tertiary headings, typically for subsections.",
     "weightValue": 600
   },
   {
@@ -41,7 +41,7 @@
     "sizePx": 20,
     "sizeRem": 1.25,
     "weightName": "Semibold",
-    "description": "Subtítulo de cuarto nivel para detalles o listas",
+    "description": "Smaller headings for components or minor divisions.",
     "weightValue": 600
   },
   {
@@ -50,7 +50,7 @@
     "sizePx": 16,
     "sizeRem": 1,
     "weightName": "Regular",
-    "description": "Texto principal para párrafos y lectura general",
+    "description": "Standard paragraph text for most content.",
     "weightValue": 400
   }
 ]

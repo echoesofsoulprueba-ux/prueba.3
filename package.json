@@ -2,15 +2,17 @@
   "name": "prueba.3",
   "private": true,
   "version": "0.0.1",
-  "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
   "exports": {
     ".": {
       "import": "./dist/index.esm.js",
-      "require": "./dist/index.js"
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
     },
-    "./dist/index.css": "./dist/index.css"
+    "./tailwind-preset": "./tailwind-preset.js",
+    "./styles.css": "./dist/index.css",
+    "./package.json": "./package.json"
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",

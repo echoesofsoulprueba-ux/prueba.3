@@ -1,3 +1,4 @@
+/* Archivo generado automáticamente en cada exportación — no editar a mano, se sobreescribe. */
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -39,59 +40,118 @@ module.exports = __toCommonJS(virtual_index_exports);
 
 // virtual:virtual:Button
 var import_react = __toESM(require("react"));
-var cn = (...inputs) => {
-  return inputs.filter(Boolean).join(" ");
-};
-var buttonVariants = {
-  primary: "bg-primary text-primary-foreground hover:bg-primary/90 active:bg-primary/80",
-  secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90 active:bg-secondary/80",
-  ghost: "hover:bg-muted hover:text-muted-foreground active:bg-muted/80"
-};
-var buttonSizes = {
-  sm: "h-9 px-3 text-sm",
-  md: "h-10 px-4 py-2",
-  lg: "h-11 px-8 text-lg"
-};
-var Button = (0, import_react.forwardRef)(function Button2({
-  className,
-  variant = "primary",
-  size = "md",
-  disabled,
-  ...props
-}, ref) {
-  const baseClasses = "inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
+function cn() {
+  var i = 0, tmp, str = "";
+  for (; i < arguments.length; i++) {
+    tmp = arguments[i];
+    if (tmp && typeof tmp === "string") {
+      str && (str += " ");
+      str += tmp;
+    } else if (tmp && typeof tmp === "object") {
+      for (var k in tmp) {
+        if (Object.prototype.hasOwnProperty.call(tmp, k) && tmp[k]) {
+          str && (str += " ");
+          str += k;
+        }
+      }
+    } else if (Array.isArray(tmp)) {
+      var inner = cn.apply(null, tmp);
+      if (inner) {
+        str && (str += " ");
+        str += inner;
+      }
+    }
+  }
+  return str;
+}
+var Button = import_react.default.forwardRef(function Button2(props, ref) {
+  const {
+    variant = "primary",
+    size = "md",
+    disabled = false,
+    children,
+    className,
+    ...rest
+  } = props;
+  const baseStyles = "inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
+  const variantStyles = {
+    primary: "bg-primary text-primary-foreground hover:bg-primary/90 active:bg-primary",
+    secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90 active:bg-secondary",
+    ghost: "hover:bg-muted hover:text-muted-foreground active:bg-muted text-foreground"
+  };
+  const sizeStyles = {
+    sm: "h-9 px-3 text-sm",
+    md: "h-10 px-4 py-2 text-base",
+    lg: "h-11 px-8 text-lg"
+  };
   return import_react.default.createElement(
     "button",
     {
-      className: cn(baseClasses, buttonVariants[variant], buttonSizes[size], className),
+      className: cn(
+        baseStyles,
+        variantStyles[variant],
+        sizeStyles[size],
+        className
+      ),
       ref,
       disabled,
-      ...props
+      ...rest
     },
-    props.children
+    children
   );
 });
 Button.displayName = "Button";
 
 // virtual:virtual:Input
 var import_react2 = __toESM(require("react"));
-var cn2 = (...inputs) => {
-  return inputs.filter(Boolean).join(" ");
-};
-function Input({ className, placeholder, disabled, error, errorMessage, defaultValue, ...props }) {
-  const baseClasses = "flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
-  const errorClasses = "border-error focus-visible:ring-error";
+function cn2() {
+  var i = 0, tmp, str = "";
+  for (; i < arguments.length; i++) {
+    tmp = arguments[i];
+    if (tmp && typeof tmp === "string") {
+      str && (str += " ");
+      str += tmp;
+    } else if (tmp && typeof tmp === "object") {
+      for (var k in tmp) {
+        if (Object.prototype.hasOwnProperty.call(tmp, k) && tmp[k]) {
+          str && (str += " ");
+          str += k;
+        }
+      }
+    } else if (Array.isArray(tmp)) {
+      var inner = cn2.apply(null, tmp);
+      if (inner) {
+        str && (str += " ");
+        str += inner;
+      }
+    }
+  }
+  return str;
+}
+var Input = import_react2.default.forwardRef(function Input2(props, ref) {
+  const {
+    placeholder,
+    disabled = false,
+    error = false,
+    errorMessage,
+    defaultValue,
+    className,
+    ...rest
+  } = props;
+  const baseStyles = "flex h-10 w-full rounded-md border bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
+  const errorStyles = error ? "border-error focus-visible:ring-error" : "border-border focus-visible:ring-primary";
   return import_react2.default.createElement(
     "div",
-    { className: "flex flex-col w-full" },
+    { className: cn2("relative", className) },
     import_react2.default.createElement(
       "input",
       {
-        className: cn2(baseClasses, error ? errorClasses : "border-border", className),
+        ref,
         placeholder,
         disabled,
         defaultValue,
-        ...props
+        className: cn2(baseStyles, errorStyles),
+        ...rest
       }
     ),
     error && errorMessage && import_react2.default.createElement(
@@ -100,29 +160,61 @@ function Input({ className, placeholder, disabled, error, errorMessage, defaultV
       errorMessage
     )
   );
-}
+});
 Input.displayName = "Input";
 
 // virtual:virtual:Textarea
 var import_react3 = __toESM(require("react"));
-var cn3 = (...inputs) => {
-  return inputs.filter(Boolean).join(" ");
-};
-function Textarea({ className, placeholder, rows = 4, disabled, error, errorMessage, defaultValue, ...props }) {
-  const baseClasses = "flex min-h-[80px] w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
-  const errorClasses = "border-error focus-visible:ring-error";
+function cn3() {
+  var i = 0, tmp, str = "";
+  for (; i < arguments.length; i++) {
+    tmp = arguments[i];
+    if (tmp && typeof tmp === "string") {
+      str && (str += " ");
+      str += tmp;
+    } else if (tmp && typeof tmp === "object") {
+      for (var k in tmp) {
+        if (Object.prototype.hasOwnProperty.call(tmp, k) && tmp[k]) {
+          str && (str += " ");
+          str += k;
+        }
+      }
+    } else if (Array.isArray(tmp)) {
+      var inner = cn3.apply(null, tmp);
+      if (inner) {
+        str && (str += " ");
+        str += inner;
+      }
+    }
+  }
+  return str;
+}
+var Textarea = import_react3.default.forwardRef(function Textarea2(props, ref) {
+  const {
+    placeholder,
+    rows = 4,
+    disabled = false,
+    error = false,
+    errorMessage,
+    defaultValue,
+    className,
+    ...rest
+  } = props;
+  const baseStyles = "flex min-h-[80px] w-full rounded-md border bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
+  const errorStyles = error ? "border-error focus-visible:ring-error" : "border-border focus-visible:ring-primary";
   return import_react3.default.createElement(
     "div",
-    { className: "flex flex-col w-full" },
+    { className: cn3("relative", className) },
     import_react3.default.createElement(
       "textarea",
       {
-        className: cn3(baseClasses, error ? errorClasses : "border-border", className),
+        ref,
         placeholder,
         rows,
         disabled,
         defaultValue,
-        ...props
+        className: cn3(baseStyles, errorStyles),
+        ...rest
       }
     ),
     error && errorMessage && import_react3.default.createElement(
@@ -131,69 +223,112 @@ function Textarea({ className, placeholder, rows = 4, disabled, error, errorMess
       errorMessage
     )
   );
-}
+});
 Textarea.displayName = "Textarea";
 
 // virtual:virtual:Alert
 var import_react4 = __toESM(require("react"));
-var cn4 = (...inputs) => {
-  return inputs.filter(Boolean).join(" ");
-};
-var alertVariants = {
-  success: "bg-success/10 border-success text-success-foreground",
-  warning: "bg-warning/10 border-warning text-warning-foreground",
-  error: "bg-error/10 border-error text-error-foreground"
-};
-function Alert({ variant = "success", title, children, className, ...props }) {
+function cn4() {
+  var i = 0, tmp, str = "";
+  for (; i < arguments.length; i++) {
+    tmp = arguments[i];
+    if (tmp && typeof tmp === "string") {
+      str && (str += " ");
+      str += tmp;
+    } else if (tmp && typeof tmp === "object") {
+      for (var k in tmp) {
+        if (Object.prototype.hasOwnProperty.call(tmp, k) && tmp[k]) {
+          str && (str += " ");
+          str += k;
+        }
+      }
+    } else if (Array.isArray(tmp)) {
+      var inner = cn4.apply(null, tmp);
+      if (inner) {
+        str && (str += " ");
+        str += inner;
+      }
+    }
+  }
+  return str;
+}
+var Alert = function Alert2(props) {
+  const {
+    variant,
+    title,
+    children,
+    className,
+    ...rest
+  } = props;
+  const baseStyles = "relative w-full rounded-lg border p-4";
+  const variantStyles = {
+    success: "bg-success/10 border-success text-success-foreground",
+    warning: "bg-warning/10 border-warning text-warning-foreground",
+    error: "bg-error/10 border-error text-error-foreground"
+  };
+  const titleStyles = "mb-1 font-bold leading-none tracking-tight";
+  const descriptionStyles = "text-sm [&_p]:leading-relaxed";
   return import_react4.default.createElement(
     "div",
     {
-      className: cn4(
-        "relative w-full rounded-lg border p-4",
-        alertVariants[variant],
-        className
-      ),
+      className: cn4(baseStyles, variantStyles[variant], className),
       role: "alert",
-      ...props
+      ...rest
     },
-    title && import_react4.default.createElement(
-      "h5",
-      { className: "mb-1 font-bold leading-none tracking-tight" },
-      title
-    ),
-    import_react4.default.createElement(
-      "div",
-      { className: "text-sm [&_p]:leading-relaxed" },
-      children
-    )
+    import_react4.default.createElement("h5", { className: titleStyles }, title),
+    import_react4.default.createElement("div", { className: descriptionStyles }, children)
   );
-}
+};
 Alert.displayName = "Alert";
 
 // virtual:virtual:Badge
 var import_react5 = __toESM(require("react"));
-var cn5 = (...inputs) => {
-  return inputs.filter(Boolean).join(" ");
-};
-var badgeVariants = {
-  "default": "border-transparent bg-muted text-muted-foreground",
-  "primary": "border-transparent bg-primary text-primary-foreground",
-  "success": "border-transparent bg-success text-success-foreground",
-  "warning": "border-transparent bg-warning text-warning-foreground",
-  "error": "border-transparent bg-error text-error-foreground"
-};
-function Badge({ className, variant = "default", children, ...props }) {
+function cn5() {
+  var i = 0, tmp, str = "";
+  for (; i < arguments.length; i++) {
+    tmp = arguments[i];
+    if (tmp && typeof tmp === "string") {
+      str && (str += " ");
+      str += tmp;
+    } else if (tmp && typeof tmp === "object") {
+      for (var k in tmp) {
+        if (Object.prototype.hasOwnProperty.call(tmp, k) && tmp[k]) {
+          str && (str += " ");
+          str += k;
+        }
+      }
+    } else if (Array.isArray(tmp)) {
+      var inner = cn5.apply(null, tmp);
+      if (inner) {
+        str && (str += " ");
+        str += inner;
+      }
+    }
+  }
+  return str;
+}
+var Badge = function Badge2(props) {
+  const {
+    variant = "default",
+    children,
+    className,
+    ...rest
+  } = props;
+  const baseStyles = "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus-visible:ring-offset-2";
+  const variantStyles = {
+    default: "border-transparent bg-muted text-muted-foreground",
+    primary: "border-transparent bg-primary text-primary-foreground",
+    success: "border-transparent bg-success text-success-foreground",
+    warning: "border-transparent bg-warning text-warning-foreground",
+    error: "border-transparent bg-error text-error-foreground"
+  };
   return import_react5.default.createElement(
-    "div",
+    "span",
     {
-      className: cn5(
-        "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
-        badgeVariants[variant],
-        className
-      ),
-      ...props
+      className: cn5(baseStyles, variantStyles[variant], className),
+      ...rest
     },
     children
   );
-}
+};
 Badge.displayName = "Badge";
